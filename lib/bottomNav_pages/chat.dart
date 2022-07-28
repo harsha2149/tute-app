@@ -55,7 +55,7 @@ class _bn_chatState extends State<bn_chat> {
                 height: 35,
                 margin: EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  color: Colors.lightGreen,
+                  color: Colors.amberAccent.shade700,
                   borderRadius: BorderRadius.all(Radius.circular(30)),
                 ),
                 child: Center(
@@ -66,18 +66,18 @@ class _bn_chatState extends State<bn_chat> {
               ),
             ),
             SizedBox(height: 30,),
-            Text('JEE MAINS & ADVANCED', style: TextStyle(fontSize: 20),),
+            Text('JEE MAINS & ADVANCED', style: TextStyle(fontSize: 20, color: Colors.lightGreen.shade600),),
             SizedBox(height: 30,),
             Row(
               children: [
                 Expanded(
-                  child: chat_subjCont(),
+                  child: chat_subjCont('MATHS'),
                 ),
                 Expanded(
-                  child: chat_subjCont(),
+                  child: chat_subjCont('PHYSICS'),
                 ),
                 Expanded(
-                  child: chat_subjCont(),
+                  child: chat_subjCont('CHEMISTRY'),
                 ),
               ],
             ),
@@ -85,18 +85,18 @@ class _bn_chatState extends State<bn_chat> {
               height: 50,
             ),
             
-            Text('NEET', style: TextStyle(fontSize: 20),),
+            Text('NEET', style: TextStyle(fontSize: 20, color: Colors.lightGreen.shade600),),
             SizedBox(height: 30,),
             Row(
             children: [
               Expanded(
-                child: chat_subjCont(),
+                child: chat_subjCont('BIOLOGY'),
               ),  Expanded(
-                child: chat_subjCont(),
+                child: chat_subjCont('PHYSICS'),
               ),  Expanded(
-                child: chat_subjCont(),
+                child: chat_subjCont('CHEMISTRY'),
               ),  Expanded(
-                child: chat_subjCont(),
+                child: chat_subjCont('ZOOLOGY'),
               ),
             ],
 
@@ -104,41 +104,41 @@ class _bn_chatState extends State<bn_chat> {
             SizedBox(
               height: 50,
             ),
-            Text('AIMS',style: TextStyle(fontSize: 20),),
+            Text('AIMS',style: TextStyle(fontSize: 20, color: Colors.lightGreen.shade600),),
             SizedBox(height: 30,),
             Row(
               children: [
                 Expanded(
-                  child: chat_subjCont(),
+                  child: chat_subjCont('BIOLOGY'),
                 ),Expanded(
-                  child: chat_subjCont(),
+                  child: chat_subjCont('PHYSICS'),
                 ),Expanded(
-                  child: chat_subjCont(),
+                  child: chat_subjCont('CHEMISTRY'),
                 ),Expanded(
-                  child: chat_subjCont(),
+                  child: chat_subjCont('GENERAL KNOWLEDGE'),
                 ),Expanded(
-                  child: chat_subjCont(),
+                  child: chat_subjCont('APTITUDE'),
                 ),
               ],
             ),
             SizedBox(
               height: 50,
             ),
-            Text('UPSC', style: TextStyle(fontSize: 20),),
+            Text('UPSC', style: TextStyle(fontSize: 20,color: Colors.lightGreen),),
            SizedBox(height: 30,),
            Row(
              children: [
                Expanded(
-                 child: chat_subjCont(),
+                 child: chat_subjCont('GENERAL STUDIES'),
                ),Expanded(
-                 child: chat_subjCont(),
+                 child: chat_subjCont('ESSAY'),
                ),Expanded(
-                 child: chat_subjCont(),
+                 child: chat_subjCont('ENGLISH'),
                ),Expanded(
-                 child: chat_subjCont(),
+                 child: chat_subjCont('INDIAN LANGUAGES'),
                ),
              ],
-           )
+           ),
 
           ],
         ),
@@ -190,9 +190,10 @@ class _bn_chatState extends State<bn_chat> {
 }
 
 class chat_subjCont extends StatelessWidget {
-  const chat_subjCont({
-    Key key,
-  }) : super(key: key);
+  chat_subjCont(this.sub_name);
+
+  String sub_name;
+
 
   @override
   Widget build(BuildContext context) {
@@ -204,7 +205,7 @@ class chat_subjCont extends StatelessWidget {
           CircleAvatar(
             radius: 45,
           ),
-          Text('MATHS')
+          Text(sub_name)
         ],
       ),
     ),);
@@ -212,9 +213,7 @@ class chat_subjCont extends StatelessWidget {
 }
 
 class contact_info extends StatelessWidget {
-  const contact_info({
-    Key key,
-  }) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
