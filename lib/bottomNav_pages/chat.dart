@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tute_app/bottomNav_pages/subscription.dart';
-
+import 'package:tute_app/contacts/details.dart';
 import '../tuteBody.dart';
 import 'ACC.dart';
 import 'notifcation.dart';
@@ -198,7 +198,11 @@ class chat_subjCont extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: (){},
+      onPressed: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context){
+          return Contacts_details();
+        }));
+      },
       child: Container(
       child: Column(
         children: [
@@ -212,44 +216,4 @@ class chat_subjCont extends StatelessWidget {
   }
 }
 
-class contact_info extends StatelessWidget {
 
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 100,
-      margin: EdgeInsets.all(10),
-      padding: EdgeInsets.all(5),
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: Colors.white60,
-        borderRadius: BorderRadius.all(Radius.circular(20)),
-        border: Border.all(
-          width: 1.0,
-        ),
-      ),
-      child: Row(
-        children: [
-          Column(
-            children: [
-              CircleAvatar(
-                radius: 30,
-                backgroundImage: AssetImage('images/profile_image.png'),
-              ),
-              SizedBox(
-                width: 30,
-              ),
-              Text(
-                'Sheik Saki',
-                style: TextStyle(
-                  fontSize: 20,
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
