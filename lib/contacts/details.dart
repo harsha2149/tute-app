@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 
 class Contacts_details extends StatefulWidget {
+
+
 
   @override
   State<Contacts_details> createState() => _Contacts_detailsState();
@@ -38,6 +39,7 @@ class _Contacts_detailsState extends State<Contacts_details> {
 
             ],
           ),
+
         ),
       ),
     );
@@ -84,22 +86,40 @@ class contact_info extends StatelessWidget {
               ),
             ],
           ),
-       SizedBox(
-          height: 30,
-       ),
-       Column(
-         children: [
-           Row(
-             children: [
-               Icon(FontAwesomeIcons.phone),
-               Text('7990539849')
-             ],
-           )
+          SizedBox(
+            width: 20,
+          ),
+          Expanded(
+            child: Column(  
+              children: [
 
-         ],
-       )
+                Expanded(
+                  child: Row(
+                    children: [
+                     TextButton(
+                       onPressed: (){
+                       },
+                       child: Container(
+                         child: Icon(Icons.email, color: Colors.red,size: 50,),
+                       ),
+
+                     ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text('send a email')
+                    ],
+                  ),
+                )
+
+              ],
+            ),
+          )
+
+
         ],
       ),
+
     );
   }
 }
