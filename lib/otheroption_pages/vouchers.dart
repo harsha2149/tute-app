@@ -10,19 +10,32 @@ class _vouchersState extends State<vouchers> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.redAccent,
-        title:  Center(child: Text('VOUCHERS', style: TextStyle(
-            fontSize: 25
+      appBar:  AppBar(
+        backgroundColor: Colors.lightGreen.shade400,
+        automaticallyImplyLeading: false,
+        toolbarHeight: 140,
+        title: Center(child: Text(' MY REWARDS', style: TextStyle(
+          fontSize: 35,
         ),)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(100),
+          ),
+        ),
       ),
       body:SafeArea(child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Container(
-            child: Center(child: Text('vouchers')),
-          )
+              Container(
+                child: Row(
+                  children: [
+                    Container(
+                      child: Image.asset(''),
+                    )
+                  ],
+                ),
+              )
         ],
       )),
     );
