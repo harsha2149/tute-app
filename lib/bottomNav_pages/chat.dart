@@ -74,10 +74,10 @@ class _bn_chatState extends State<bn_chat> {
                   child: chat_subjCont('MATHS'),
                 ),
                 Expanded(
-                  child: chat_subjCont('PHYSICS'),
+                  child: chat_subjCont('PHY'),
                 ),
                 Expanded(
-                  child: chat_subjCont('CHEMISTRY'),
+                  child: chat_subjCont('CHEM'),
                 ),
               ],
             ),
@@ -90,13 +90,13 @@ class _bn_chatState extends State<bn_chat> {
             Row(
             children: [
               Expanded(
-                child: chat_subjCont('BIOLOGY'),
+                child: chat_subjCont('BIO'),
               ),  Expanded(
-                child: chat_subjCont('PHYSICS'),
+                child: chat_subjCont('PHY'),
               ),  Expanded(
-                child: chat_subjCont('CHEMISTRY'),
+                child: chat_subjCont('CHEM'),
               ),  Expanded(
-                child: chat_subjCont('ZOOLOGY'),
+                child: chat_subjCont('ZOO'),
               ),
             ],
 
@@ -109,13 +109,13 @@ class _bn_chatState extends State<bn_chat> {
             Row(
               children: [
                 Expanded(
-                  child: chat_subjCont('BIOLOGY'),
+                  child: chat_subjCont('BIO'),
                 ),Expanded(
-                  child: chat_subjCont('PHYSICS'),
+                  child: chat_subjCont('PHY'),
                 ),Expanded(
-                  child: chat_subjCont('CHEMISTRY'),
+                  child: chat_subjCont('CHEM'),
                 ),Expanded(
-                  child: chat_subjCont('GENERAL KNOWLEDGE'),
+                  child: chat_subjCont('GK'),
                 ),Expanded(
                   child: chat_subjCont('APTITUDE'),
                 ),
@@ -129,13 +129,13 @@ class _bn_chatState extends State<bn_chat> {
            Row(
              children: [
                Expanded(
-                 child: chat_subjCont('GENERAL STUDIES'),
+                 child: chat_subjCont('GK'),
                ),Expanded(
                  child: chat_subjCont('ESSAY'),
                ),Expanded(
-                 child: chat_subjCont('ENGLISH'),
+                 child: chat_subjCont('ENG'),
                ),Expanded(
-                 child: chat_subjCont('INDIAN LANGUAGES'),
+                 child: chat_subjCont('IND LANGUAGES'),
                ),
              ],
            ),
@@ -207,9 +207,9 @@ class chat_subjCont extends StatelessWidget {
       child: Column(
         children: [
           CircleAvatar(
+            child: Text(sub_name),
             radius: 45,
           ),
-          Text(sub_name)
         ],
       ),
     ),);
